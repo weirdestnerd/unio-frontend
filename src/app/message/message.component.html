@@ -1,0 +1,9 @@
+<div
+  [ngClass]="{
+    'bot-message has-background-light has-text-black': chat['isBotMessage'],
+    'user-message has-background-grey-dark has-text-light': !chat['isBotMessage'],
+    'app-message tile is-child notification': true
+  }"
+>
+  {{chat['message']}}
+</div>

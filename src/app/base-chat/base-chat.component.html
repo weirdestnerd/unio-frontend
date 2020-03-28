@@ -1,0 +1,26 @@
+<div class="base-chat tile">
+  <div class="identity app-bg-black">
+    <h1 class="title is-family-monospace">{{ name || 'Unio'}}</h1>
+  </div>
+
+  <div class="chat-content tile is-parent is-vertical">
+    <div *ngFor="let chat of chats">
+      <app-message [chat]="chat"></app-message>
+    </div>
+  </div>
+
+ <div class="user-chat-input app-bg-black">
+   <div class="control">
+     <label>
+       <input class="input app-bg-black" type="text" placeholder="Say something">
+     </label>
+   </div>
+   <div class="control">
+     <a class="button app-bg-black is-family-monospace">
+       <span class="icon">
+           <i class="material-icons">send</i>
+       </span>
+     </a>
+   </div>
+ </div>
+</div>

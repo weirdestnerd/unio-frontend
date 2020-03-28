@@ -1,0 +1,12 @@
+.app-message {
+  width: 80%;
+  margin: 5px 0 !important;
+}
+
+.user-message {
+  float: right;
+}
+
+.bot-message {
+  float: left;
+}
