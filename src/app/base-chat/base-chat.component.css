@@ -51,7 +51,7 @@
   font-family: monospace !important;
 }
 
-.base-chat > div.user-chat-input div.control > a.button {
+.base-chat > div.user-chat-input div.control > button.button {
   border-color: #1c1c1c;
   color: #f6f6f6;
 }

@@ -12,15 +12,18 @@
  <div class="user-chat-input app-bg-black">
    <div class="control">
      <label>
-       <input class="input app-bg-black" type="text" placeholder="Say something">
+       <input class="input app-bg-black" type="text" placeholder="Say something"
+              [(ngModel)]="messageInput"
+              (keyup.enter)="sendMessage()"
+       >
      </label>
    </div>
    <div class="control">
-     <a class="button app-bg-black is-family-monospace">
+     <button class="button app-bg-black is-family-monospace" (click)="sendMessage()">
        <span class="icon">
            <i class="material-icons">send</i>
        </span>
-     </a>
+     </button>
    </div>
  </div>
 </div>
