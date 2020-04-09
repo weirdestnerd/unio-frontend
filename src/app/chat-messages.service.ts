@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
 import {Chat} from '../interfaces/Chat';
 import { HttpClient } from '@angular/common/http';
-
+import {Observable} from 'rxjs';
+import {BotResponse} from '../interfaces/BotResponse';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ChatMessagesService {
-  chats: Array<Chat>;
-  // TODO: get username from Firebase
   username = 'default_username';
   baseApiUrl = `/api/${this.username}`;
 
@@ -20,10 +19,9 @@ export class ChatMessagesService {
     return this.http.get<Array<Chat>>(`${this.baseApiUrl}/chat_history`);
   }
 
-  getBotResponseForMessage(message: string) {
-    return this.http.get<string>(`${this.baseApiUrl}/bot_response`, {
+  getBotResponseForMessage(message: string): Observable<BotResponse> {
+    return this.http.get<BotResponse>(`${this.baseApiUrl}/bot_response`, {
       params: {message}
     });
-    // return this.http.post<string>(`${this.baseApiUrl}/bot_response`, message);
   }
 }

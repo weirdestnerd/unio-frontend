@@ -33,8 +33,7 @@ export class BaseChatComponent implements OnInit {
 
     this.chatMessagesService.getBotResponseForMessage(this.messageInput)
       .subscribe((botResponse) => {
-        // @ts-ignore
-        const response = (botResponse as object).response;
+        const response = (botResponse).response;
         this.addBotMessageToChats(response);
       });
   }
