@@ -1,3 +1,5 @@
+[![circleci](https://circleci.com/gh/weirdestnerd/unio-frontend.svg?style=shield)](https://app.circleci.com/pipelines/github/weirdestnerd/unio-frontend)
+
 # Unio Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
